@@ -18,6 +18,9 @@ public class FeedbackEntity {
 	
 	@Column(name = "feedback")
 	private String feedback;
+	
+	@Column(name="rating")
+	private int rating;
 
 	public Long getId() {
 		return id;
@@ -34,11 +37,23 @@ public class FeedbackEntity {
 	public void setFeedback(String feedback) {
 		this.feedback = feedback;
 	}
+	
+	
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
 
 	@Override
 	public String toString() {
-		return "FeedbackEntity [id=" + id + ", feedback=" + feedback + "]";
+		return "FeedbackEntity [id=" + id + ", feedback=" + feedback + ", rating=" + rating + "]";
 	}
+
+	
 	
 	
 }
